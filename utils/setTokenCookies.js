@@ -17,14 +17,14 @@ const setTokenCookies = (
     maxAge: accessTokenMaxAge,
     httpOnly: true,
     secure: true,
-    //   sameSite: 'strict',
+    sameSite: 'None',
   });
 
   res.cookie("refreshToken", refreshToken, {
     maxAge: refreshTokenMaxAge,
     httpOnly: true,
     secure: true,
-    //   sameSite: 'strict',
+    sameSite: 'None',
   });
 };
 
