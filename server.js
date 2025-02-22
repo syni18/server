@@ -35,6 +35,7 @@ app.use(cookieParser());    // Use cookie-parser middleware
 app.use(morgan("tiny"));
 app.use(cors({
     origin: process.env.FRONTEND_BASE_URL,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     credentials: true }));
 
 // app.disable('x-powered-by');   //prevent exposing backend details
