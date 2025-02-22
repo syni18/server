@@ -7,12 +7,13 @@ import session from "express-session";
 import router from "./router/route.js";
 import cookieParser from "cookie-parser";
 import connect from "./database/connection.js";
-dotenv.config();
-
 import './components/google-strategy.js';
 import './utils/passport-jwt-strategy.js';
 
+// dot env config
+dotenv.config();
 
+// express app
 const app = express();
 
 // ** middleware **
