@@ -43,9 +43,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: false, // Only secure in production
+      secure: true, // Only secure in production
       httpOnly: true, // Prevent access to cookies via JavaScript
-      sameSite: "strict", // Prevent CSRF attacks
+      sameSite: "None", // Prevent CSRF attacks
     },
   })
 );
