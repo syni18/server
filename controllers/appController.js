@@ -902,10 +902,10 @@ export async function getSearchProducts(req, res) {
       ],
     });
 
-    res.status(200).json(searchResults); // Send the search results as JSON response
+    res.status(200).json({status: true, msg: "Search results found", data: searchResults}); // Send the search results as JSON response
   } catch (error) {
     console.error("Error searching products:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    res.status(500).json({ status: false, msg: "Internal server error." });
   }
 }
 
