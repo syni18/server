@@ -26,6 +26,7 @@ const setTokenCookies = (
     secure: true,
     sameSite: 'None',
   });
+  console.log("cookies set", accessToken, refreshToken, accessTokenExpiry, refreshTokenExpiry);
 };
 
 export default setTokenCookies;

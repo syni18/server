@@ -62,6 +62,8 @@ export async function getCallbackGoogle(req, res, next) {
       if (err) {
         return next(err); // Handle errors from passport
       }
+      console.log("user", user);
+      
       if (!user) {
         return res.redirect("/login"); // Handle case where authentication fails
       }
@@ -78,6 +80,8 @@ export async function getCallbackGoogle(req, res, next) {
       setTokenCookies(res, accessToken, refreshToken, accessTokenExpiry, refreshTokenExpiry);
 
       // Redirect to the frontend
+      console.log("redirecting to frontend", a);
+      
       res.redirect(process.env.FRONTEND_BASE_URL);
     }
   )(req, res, next); // Pass req, res, and next to the passport middleware
