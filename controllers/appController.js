@@ -80,7 +80,7 @@ export async function getCallbackGoogle(req, res, next) {
       setTokenCookies(res, accessToken, refreshToken, accessTokenExpiry, refreshTokenExpiry);
 
       // Redirect to the frontend
-      console.log("redirecting to frontend", a);
+      console.log("redirecting to frontend");
       
       res.redirect(process.env.FRONTEND_BASE_URL);
     }
